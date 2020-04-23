@@ -1,5 +1,7 @@
 # visualization
-
+```
+cd visualization
+```
 ## Project setup
 ```
 npm install
