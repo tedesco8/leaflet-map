@@ -4,8 +4,11 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
 import axios from 'axios';
+import HighchartsVue from 'highcharts-vue'
 import 'leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
+
+Vue.use(HighchartsVue)
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
