@@ -22,6 +22,7 @@ export default {
   },
   /* eslint-disable no-debugger */
   mounted: function () {
+    debugger;
     let me = this;
     let vehicles = 311;
     let datetime_from = "2020-04-20T12:00"
@@ -35,7 +36,7 @@ export default {
       configuracion
     )
     .then( r => {
-      me.tracking = r.data;
+      me.tracking = r.data.tracking[0].data;
     })
     .catch(function(error) {
       console.log(error);

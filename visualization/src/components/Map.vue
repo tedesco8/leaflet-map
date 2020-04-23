@@ -5,16 +5,16 @@
             </l-tile-layer>
             <l-marker 
                 :key="index"
-                v-for="(c, index) in tracking.data"
+                v-for="(c, index) in tracking"
                 :lat-lng="latlng(c.position.latitude, c.position.longitude)"
             >
                 <l-popup>
                     <div @click="innerClick">
                         <h3>{{c.vehicle_id}}</h3>
                         <ul>
-                            <li>Id Vehiculo: {{c.data.document_id}}</li>document_id
-                            <li>Tiempo: {{c.data.timestamp}}</li>
-                            <li>Curso: {{c.data.course}}</li>
+                            <li>Id Vehiculo: {{c.document_id}}</li>
+                            <li>Tiempo: {{c.timestamp}}</li>
+                            <li>Curso: {{c.position.course}}</li>
                         </ul>
                     </div>
                 </l-popup>
@@ -22,6 +22,7 @@
         </l-map>
 </template>
 <script>
+ /* eslint-disable no-debugger */
 import { latLng } from "leaflet";
 import { LMap, LTileLayer, LPopup, LMarker } from 'vue2-leaflet';
     export default {
@@ -29,7 +30,7 @@ import { LMap, LTileLayer, LPopup, LMarker } from 'vue2-leaflet';
         data() {
             return {
                 zoom: 13,
-                center: latLng(-34.87749017127787, -56.18675851667139),
+                center: latLng(-33.170892, -58.180491),
                 url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
                 withPopup: latLng(47.41322, -1.219482),
@@ -55,6 +56,7 @@ import { LMap, LTileLayer, LPopup, LMarker } from 'vue2-leaflet';
         },
         methods: {
             latlng: function(lat, lng) {
+                
                 return latLng(lat, lng);
             },
             showLongText() {
@@ -65,4 +67,5 @@ import { LMap, LTileLayer, LPopup, LMarker } from 'vue2-leaflet';
             }
         }
     }
+/* eslint-disable no-debugger */
 </script>
