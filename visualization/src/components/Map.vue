@@ -29,8 +29,8 @@ import { LMap, LTileLayer, LPopup, LMarker } from 'vue2-leaflet';
         name: 'Map',
         data() {
             return {
-                zoom: 13,
-                center: latLng(-33.170892, -58.180491),
+                zoom: 7,
+                center: latLng(-32.875555, -56.020152),
                 url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
                 withPopup: latLng(47.41322, -1.219482),
