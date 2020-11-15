@@ -1,8 +1,8 @@
 <template>
     <v-container fluid>
-        <v-layout row mt-2 wrap style="height:450px">
+        <v-layout row mt-2 wrap style="height:500px">
           <v-flex class="purple darken-4" md12>
-            <Map :tracking="tracking"/>
+            <Map :arr="arr"/>
           </v-flex>
         </v-layout>
     </v-container>
@@ -17,7 +17,7 @@
             }
         },
         props: {
-            tracking: Array
+            arr: Array
         },
         components: {
             Map

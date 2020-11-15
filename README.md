@@ -1,6 +1,6 @@
-# visualization
+# leaflet-highcharts
 ```
-cd visualization
+cd leaflet-highcharts
 ```
 ## Project setup
 ```

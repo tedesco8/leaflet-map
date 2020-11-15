@@ -3,7 +3,6 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
-import axios from 'axios';
 import HighchartsVue from 'highcharts-vue'
 import 'leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
@@ -18,8 +17,6 @@ Icon.Default.mergeOptions({
 });
 
 Vue.config.productionTip = false
-
-axios.defaults.baseURL='https://backend.smartwaypanel.com/api/tracking/historical_data/';
 
 new Vue({
   router,

@@ -5,17 +5,19 @@
             </l-tile-layer>
             <l-marker 
                 :key="index"
-                v-for="(c, index) in tracking"
-                :lat-lng="latlng(c.position.latitude, c.position.longitude)"
+                v-for="(c, index) in arr"
+                :lat-lng="latlng(c.lat, c.lng)"
             >
                 <l-popup>
                     <div @click="innerClick">
-                        <h3>{{c.vehicle_id}}</h3>
-                        <ul>
-                            <li>Id Vehiculo: {{c.document_id}}</li>
-                            <li>Tiempo: {{c.timestamp}}</li>
-                            <li>Curso: {{c.position.course}}</li>
-                        </ul>
+                        <div>
+                            <img :src="c.img" alt="MDN" width="300" height="150">
+                        </div>
+                        <h3>{{c.title}}</h3>
+                        <span>{{c.location}}</span>
+                        <p>
+                            {{c.description}}
+                        </p>
                     </div>
                 </l-popup>
             </l-marker>
@@ -46,7 +48,7 @@ import { LMap, LTileLayer, LPopup, LMarker } from 'vue2-leaflet';
             }
         },
         props: {
-            tracking: Array
+            arr: Array
         },
         components: {
             LMap,
