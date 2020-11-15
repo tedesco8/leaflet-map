@@ -1,11 +1,16 @@
 {
-  "name": "visualization",
+  "name": "leaflet-highcharts",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
+  },
+  "author": {
+    "name": "Pablo Tedesco",
+    "email": "development@tedesco.es",
+    "url": "https://dev.tedesco.es"
   },
   "dependencies": {
     "axios": "^0.19.2",
