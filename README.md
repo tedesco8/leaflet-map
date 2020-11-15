@@ -1,6 +1,6 @@
-# leaflet-highcharts
+# leaflet-map
 ```
-cd leaflet-highcharts
+cd leaflet-map
 ```
 ## Project setup
 ```
